@@ -7,8 +7,7 @@
 ======================================================================
 
 +++ License +++
-Restaurant website is 100% FREE!  We kindly ask you to
-leave the footer links intact. Thank you so much! :)
+Restaurant website is 100% FREE! Thank you so much! :)
 
    
 
