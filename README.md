@@ -1,7 +1,7 @@
 # shivsagar.com
 ======================================================================
 
-	  Website Name: Shiv Sagar Restaurant and Lodge
+	  Website Name: Vishnu Sagar Restaurant and Lodge
 	  Author: Vishwas Vijaya Kumar, Venkat Sambandhan, Maaz Syed
 
 ======================================================================
