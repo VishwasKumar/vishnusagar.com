@@ -83,8 +83,8 @@
 			<div class="container_12">  
 				<div class="grid_7">  	
 					<br><br><br><br><br><br>
-					<?php5 
-					include('include/db_con.php');
+					<?php 
+					// include('include/db_con.php');
 					session_start();
 					if (isset($_POST['username'],$_POST['password']))
 					{
@@ -117,10 +117,10 @@
 					<form action="admin_login.php" method="POST">
 						<h2 align="center" id="h"><u><i>Login Here........</i></u></h2>
 						<table align="center">
-							<tr> <?php5  if (isset($error)) {?>
-								<small style="color:#aa0000;"><?php5 echo $error; ?>
+							<tr> <?php  if (isset($error)) {?>
+								<small style="color:#aa0000;"><?php echo $error; ?>
 									<br /> <br />
-									<?php5 } ?> </tr>
+									<?php } ?> </tr>
 									<tr>
 										<td width="113">Email:</td>
 										<td width="215">
