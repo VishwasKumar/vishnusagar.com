@@ -130,6 +130,38 @@ a.btn.m1 {
 	margin-bottom: 1px;
 }
 
+.button{
+	font-size: 12px;
+	display: inline-block;
+	background: #5fa022;
+	padding: 5px 14px 4px;
+	border-radius: 4px;
+	margin-top: 17px;
+	color: #fff;
+	text-transform: uppercase;
+}
+
+.button:hover {
+	background: #699440;
+}
+
+.button.m1 {
+	margin-top: 30px;
+	margin-bottom: 1px;
+}
+
+.reserve{
+	padding-top: 40px;
+}
+
+.reserve td{
+	padding-top: 18px;
+}
+
+#admin{
+	border : 1px;
+	border-color: black;
+}
 /*preclass*/
 
 .mb0 {
@@ -271,6 +303,7 @@ header h1 a img {
 	float: left;
 	margin-top: 2px;
 	margin-right: 24px;
+	width: 110px;
 }
 
 .car_wrap {

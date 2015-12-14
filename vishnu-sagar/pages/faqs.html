@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Vishnu Sagar Restaurant and Lodge | News</title>
+  <meta charset="utf-8">
+  <link rel="icon" href="../images/favicon.ico">
+  <link rel="shortcut icon" href="../images/favicon.ico">
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/jquery.js"></script>
+  <script src="../js/jquery-migrate-1.1.1.js"></script>
+  <script src="../js/superfish.js"></script>
+  <script src="../js/jquery.easing.1.3.js"></script>
+  <script src="../js/sForm.js"></script>
+  <script type="text/javascript">
+    function toggle(tag) {
+        var x=document.getElementsByName(tag)[0];
+        var a = x.parentNode
+        if (a.style.display=='block'){
+            a.style.display='none'
+        }else{
+            a.style.display='block'     
+        }
+    }
+
+
+    function init() {
+        //this function will add show hide functionality to paired list items,
+        //as long as the answer is a list item straight after the question list item.
+        //You can also have as many separate lists as you want.
+        //all lists must be contained within a div with id QA
+
+        var obj = document.getElementById('QA');
+        var elements = obj.getElementsByTagName('li');
+               var index = 1 
+        //add javascript to question elements
+              //you could also add styling to question elements here
+        for (var i=0; i < elements.length; i+=2){
+            var element = elements[i]; 
+            element.innerHTML = "<a href='javascript:toggle(" + index + ")'>" + element.innerHTML + "</a>"
+            index = index + 1
+        } 
+        //add bookmark to answer elements and add styling
+        var index = 1
+        for (var i=1; i < elements.length; i+=2){
+            var element = elements[i]; 
+            element.innerHTML = "<a name='" + index + "' id='" + index + "'></a>" + element.innerHTML 
+            index = index + 1
+                 element.style.padding = '0px 0px 10px 20px' //add indent to answer
+                       element.style.listStyleType = 'none' //remove bullet
+            element.style.display = 'none' //hide answer element
+        }       
+     }
+
+
+window.onload = init; 
+
+</script>
+
+<!--[if lt IE 9]>
+<script src="../js/html5shiv.js"></script>
+<link rel="stylesheet" media="screen" href="../css/ie.css">
+<![endif]-->
+</head>
+<body>
+  <div class="main">
+    <header>
+      <div class="container_12">
+        <div class="grid_12">
+          <h1><a href="../home.html"><img src="../images/logo.png" alt=""></a></h1>
+          <div class="menu_block">
+            <nav>
+              <ul class="sf-menu">
+                <li class="current"><a href="../home.html">Home</a></li>
+                <li class="with_ul"><a href="#">About Us</a>
+                 <ul>
+                  <li><a href="mission.html"> MISSION</a></li>
+                  <li><a href="ourstory.html">Our Story</a></li>
+                  <li><a href="faqs.html">FAQ's</a></li>
+                </ul>
+              </li>
+              <li ><a href="#">Lodge</a>
+               <ul>
+                 <li><a href="features-rest.html"> Features</a></li>
+                 <li><a href="reservation/reserve.php">Reserve</a></li>
+                 <li><a href="portfolio-l.html">Gallery</a></li>
+                 <li><a href="policies.html">Policies</a></li>
+               </ul>
+             </li>
+             <li><a href="menu.html">Restaurant</a>
+              <ul>
+               <li><a href="menu.html"> MENU</a></li>
+               <li><a href="portfolio.html">Gallery</a></li>
+               <li><a href="features-rest.html"> Features</a></li>
+             </ul>
+           </li>
+           <li><a href="contacts.html">Contacts</a></li>
+         </ul>
+       </nav>
+       <div class="clear"></div>
+     </div>
+     <div class="clear"></div>
+   </div>
+ </div>
+</header>
+<div class="content">
+  <div class="container_12">
+<br><br>
+<p class="col1"><CENTER><b>FREQUENTLY ASKED QUESTIONS
+            <br><br></b></p></CENTER>
+<div id="QA">
+  <ul>
+    <li>What is check in/check out time?</li>
+    <li>Check in 3 p.m., check out 12 p.m.</li><br>
+    <li>Do you allow smoking on property? In the rooms?</li>
+    <li>We are a Non-Smoking hotel.</li><br>
+  </ul>
+  <ul>
+    <li>Do you have a fitness center? What kind of equipment does it have? What are the hours?</li>
+    <li>Yes, it is open 24 hours a day. It includes treadmills, free weights, elliptical machines and a stationary bike.</li><br>
+    <li>Will your rooms allow rollaways/cribs/playards? Is there a charge?</li>
+    <li>We do provide cribs complimentary; however we do not have rollaways.</li><br>
+  </ul>
+   <ul>
+    <li>What is your cancellation/deposit policy?</li>
+    <li>If booked directly through the Hotel, we have a 24 Hour prior to arrival cancellation policy on most reservations. You must cancel by 6 p.m. Eastern Standard time the day prior to arrival to avoid penalty. On certain reservations a special cancellation may apply. If booked through a third party, please contact the booking agent directly for cancellation policies.</li><br>
+    <li>What are the hours of the restaurant/bar/lounge?</li>
+    <li>Breakfast: Monday – Friday, 6:30 a.m. – 10:30 a.m.
+Saturday – Sunday, 7 a.m. – 11 a.m.
+Lunch: Wednesdays only, 12 noon – 2 p.m.
+Dinner: Sunday – Thursday, 5 p.m. – 10 p.m.
+Friday – Saturday, 5 p.m. – 11 p.m.
+Bar: Daily, 3 p.m. – 1 a.m.</li><br>
+  </ul>
+   <ul>
+    <li>Are pets allowed? Are there restrictions for weight, height or types?</li>
+    <li>Yes, The Muse is a pet-friendly hotel. All pets are welcome.
+Any type of pet is allowed with no weight or size restrictions.
+No charge or deposit, however there is a waiver required at check-in.
+No limit on the number of pets allowed</li><br>
+    <li>Do you offer special group rates?</li>
+    <li>Kimpton Hotels offers special rates during certain times of the year and the week. Please find a list of our Hot Dates, Great Rates and book your next meeting at a Kimpton Hotel.</li><br>
+  </ul>
+</div>   
+   <div class="clear"></div>
+   <div class="bottom_block">
+    <div class="grid_6">
+      <h3>Follow Us</h3>
+      <div class="socials"> <a href="#"></a> <a href="#"></a> <a href="#"></a> </div>
+      <nav>
+        <ul>
+          <li><a href="../home.html">Home</a></li>
+          <li><a href="mission.html">About Us</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li class="current"><a href="#">News</a></li>
+          <li><a href="contacts.html">Contacts</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="grid_6">
+      <h3>Email Updates</h3>
+      <p class="col1">Join our digital mailing list and get news<br>
+        deals and be first to know about events</p>
+        <form id="newsletter" action="#">
+          <div class="success">Your subscribe request has been sent!</div>
+          <label class="email">
+            <input type="email" value="Enter e-mail address" >
+            <a href="#" class="btn" data-type="submit">subscribe</a> <span class="error">*This is not a valid email address.</span> </label>
+          </form>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+</div>
+<footer>
+  <div class="container_12">
+    <div class="grid_12"> VISNHU SAGAR &copy; 2015 | <a href="#">Privacy Policy</a></div>
+    <div class="clear"></div>
+  </div>
+</footer>
+</body>
+</html>

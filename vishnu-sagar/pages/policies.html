@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Vishnu Sagar Restaurant and Lodge | Policies</title>
+  <meta charset="utf-8">
+  <link rel="icon" href="../images/favicon.ico">
+  <link rel="shortcut icon" href="../images/favicon.ico">
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/jquery.js"></script>
+  <script src="../js/jquery-migrate-1.1.1.js"></script>
+  <script src="../js/superfish.js"></script>
+  <script src="../js/jquery.easing.1.3.js"></script>
+  <script src="../js/sForm.js"></script>
+  <script type="text/javascript">
+    function toggle(tag) {
+        var x=document.getElementsByName(tag)[0];
+        var a = x.parentNode
+        if (a.style.display=='block'){
+            a.style.display='none'
+        }else{
+            a.style.display='block'     
+        }
+    }
+
+
+    function init() {
+        //this function will add show hide functionality to paired list items,
+        //as long as the answer is a list item straight after the question list item.
+        //You can also have as many separate lists as you want.
+        //all lists must be contained within a div with id QA
+
+        var obj = document.getElementById('QA');
+        var elements = obj.getElementsByTagName('li');
+               var index = 1 
+        //add javascript to question elements
+              //you could also add styling to question elements here
+        for (var i=0; i < elements.length; i+=2){
+            var element = elements[i]; 
+            element.innerHTML = "<a href='javascript:toggle(" + index + ")'>" + element.innerHTML + "</a>"
+            index = index + 1
+        } 
+        //add bookmark to answer elements and add styling
+        var index = 1
+        for (var i=1; i < elements.length; i+=2){
+            var element = elements[i]; 
+            element.innerHTML = "<a name='" + index + "' id='" + index + "'></a>" + element.innerHTML 
+            index = index + 1
+                 element.style.padding = '0px 0px 10px 20px' //add indent to answer
+                       element.style.listStyleType = 'none' //remove bullet
+            element.style.display = 'none' //hide answer element
+        }       
+     }
+
+
+window.onload = init; 
+</script>
+<!--[if lt IE 9]>
+<script src="../js/html5shiv.js"></script>
+<link rel="stylesheet" media="screen" href="../css/ie.css">
+<![endif]-->
+</head>
+<body>
+  <div class="main">
+    <header>
+      <div class="container_12">
+        <div class="grid_12">
+          <h1><a href="../home.html"><img src="../images/logo.png" alt=""></a></h1>
+          <div class="menu_block">
+            <nav>
+              <ul class="sf-menu">
+                <li class="current"><a href="../home.html">Home</a></li>
+                <li class="with_ul"><a href="#">About Us</a>
+                 <ul>
+                  <li><a href="mission.html"> MISSION</a></li>
+                  <li><a href="ourstory.html">Our Story</a></li>
+                  <li><a href="faqs.html">FAQ's</a></li>
+                </ul>
+              </li>
+              <li ><a href="#">Lodge</a>
+               <ul>
+                 <li><a href="features-rest.html"> Features</a></li>
+                 <li><a href="reservation/reserve.php">Reserve</a></li>
+                 <li><a href="portfolio-l.html">Gallery</a></li>
+                 <li><a href="policies.html">Policies</a></li>
+               </ul>
+             </li>
+             <li><a href="menu.html">Restaurant</a>
+              <ul>
+               <li><a href="menu.html"> MENU</a></li>
+               <li><a href="portfolio.html">Gallery</a></li>
+               <li><a href="features-rest.html"> Features</a></li>
+             </ul>
+           </li>
+           <li><a href="contacts.html">Contacts</a></li>
+         </ul>
+       </nav>
+       <div class="clear"></div>
+     </div>
+     <div class="clear"></div>
+   </div>
+ </div>
+</header>
+<div class="content">
+  <div class="container_12">
+<p class="col1"><h2><CENTER>POLICIES:
+            <br><br></p></CENTER></h2>
+<div id="QA">
+  <ul>
+    <li>CHECK-IN/CHECK-OUT:</li>
+    <li>Check-in: 3:00 p.m./Check-out: Noon
+No one under 21 allowed to check in without an adult</li><br>
+    <li>ROOM POLICY</li>
+    <li>Our hotel enforces a Good Night’s Rest policy on weekend nights. Only registered guests will be allowed in the room after 10:00 p.m. Only personal-sized coolers are allowed in the hotel. All guest rooms are smoke-free.</li><br>
+  </ul>
+  <ul>
+    <li>CANCELLATION POLICY</li>
+    <li>Cancellations within 48 hours will be charged one night’s room rate and tax. Should you need to change or cancel your reservation, please have your confirmation number or the credit card number used to reserve the room available for the agent. Seven days are required for cancellations during the holidays. Cancellation policy is subject to change based on packages and seasonal periods.</li><br>
+    <li>PET POLICY</li>
+    <li>Pets under: 25 lbs. allowed ($50 non-refundable cleaning fee). Pet must be in kennel when the guest is not in the room. Please present the pet at the Front Desk at check-in.</li><br>
+  </ul>
+   <ul>
+    <li>POOL POLICY</li>
+    <li>Only registered guests are allowed on the pool deck. There is no life guard on duty at the pool. No alcoholic beverages may be brought to the pool when the pool bar is open.</li><br>
+    <li>WELLNESS POLICY </li>
+    <li>Any use of Omni’s fitness centers, Fit Kits, Sleep Kits, or participation in off-site exercise classes or other programs offered by Omni (“Wellness Benefits”) is done at participant’s sole risk.  Omni shall not be liable for any injuries, loss, or damage to the participant or participant’s personal property resulting from the use of the Wellness Benefits, regardless of whether it occurs as a result of Omni’s negligence.  If the participant chooses to use the Wellness Benefits, the participant hereby expressly waives any claim of liability - for personal/bodily injury or damages - which occurs to the participant or for any loss of or injury to person or property. This waiver is intended to be a complete release of any responsibility for personal injuries and/or property loss/damage sustained by any participant while on Omni’s premises or at off-site exercise classes, whether using exercise equipment or not.</li><br>
+  </ul>
+</div> 
+   <div class="clear"></div>
+   <div class="bottom_block">
+    <div class="grid_6">
+      <h3>Follow Us</h3>
+      <div class="socials"> <a href="#"></a> <a href="#"></a> <a href="#"></a> </div>
+      <nav>
+        <ul>
+          <li><a href="../home.html">Home</a></li>
+          <li><a href="mission.html">About Us</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li class="current"><a href="news.html">News</a></li>
+          <li><a href="contacts.html">Contacts</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="grid_6">
+      <h3>Email Updates</h3>
+      <p class="col1">Join our digital mailing list and get news<br>
+        deals and be first to know about events</p>
+        <form id="newsletter" action="#">
+          <div class="success">Your subscribe request has been sent!</div>
+          <label class="email">
+            <input type="email" value="Enter e-mail address" >
+            <a href="#" class="btn" data-type="submit">subscribe</a> <span class="error">*This is not a valid email address.</span> </label>
+          </form>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+</div>
+<footer>
+  <div class="container_12">
+    <div class="grid_12"> VISNHU SAGAR &copy; 2015 | <a href="#">Privacy Policy</a> </div>
+    <div class="clear"></div>
+  </div>
+</footer>
+</body>
+</html>
