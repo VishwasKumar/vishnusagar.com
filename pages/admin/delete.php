@@ -5,7 +5,7 @@
 <title>Untitled Document</title></head>
 
 <body>
-<?php
+<?php5
 include('include/db_con.php');
 
 if(isset($_GET['id']))

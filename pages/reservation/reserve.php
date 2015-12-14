@@ -11,11 +11,11 @@
   <script src="../../js/superfish.js"></script>
   <script src="../../js/jquery.easing.1.3.js"></script>
   <script src="../../js/sForm.js"></script>
-  <?php 
+  <?php5 
   session_start();
   ?>
 
-  <?php 
+  <?php5 
   include('include/db_con.php');
   /* session_start(); //MS */
   if(isset($_POST['Submit']))
@@ -277,10 +277,10 @@ else {
           <h2 align="center"><p>Login Here........</p></h2>
           <br><br>
           <table align="center" id="t">
-            <tr> <?php  if (isset($error)) {?>
-             <small style="color:#aa0000;"><?php echo $error; ?>
+            <tr> <?php5  if (isset($error)) {?>
+             <small style="color:#aa0000;"><?php5 echo $error; ?>
               <br /> <br />
-              <?php } ?> </tr>
+              <?php5 } ?> </tr>
               <tr>
                 <td width="113">Email:</td>
                 <td width="215">

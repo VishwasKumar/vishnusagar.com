@@ -11,7 +11,7 @@
   <script src="../../js/superfish.js"></script>
   <script src="../../js/jquery.easing.1.3.js"></script>
   <script src="../../js/sForm.js"></script>
-  <?php
+  <?php5
   session_start();
   ?>
   <script>
@@ -84,7 +84,7 @@
 </header>
 <div class="content">
   <div class="container_12">
-    <?php
+    <?php5
     include('include/db_con.php');
     if(isset($_POST['sub']))
     {
@@ -102,7 +102,7 @@
       if($checkcount>=10) {
         ?>
         <script>alert("Sorry Rooms Are not Available :( please try another Option !!");</script>
-          <?php }
+          <?php5 }
           else{
             $checkroom= "select room_price from roomtype where room_type='".$roomtype."' and room_seson='".$_SESSION[season]."'";
             $check=mysql_query($checkroom) or die (mysql_error($con));
@@ -125,7 +125,7 @@
          <div id="r">
            <form action="registration.php" method="POST">
              <h2 align="center" id="h"><u><i>Book Room</i></u></h2>
-	<h3> Welcome <?php
+	<h3> Welcome <?php5
 	if(isset($_SESSION['username'])){ echo $_SESSION['first_name']; }
 	else{
 		header("location:reserve.php");
@@ -135,12 +135,12 @@
     <tr>
       <td width="113">Check in Date</td>
       <td width="215">
-        <input name="startdate1" type="date"  value="<?php if(isset($_POST['startdate1'])){ echo $_POST['startdate1']; }?>" /></td>
+        <input name="startdate1" type="date"  value="<?php5 if(isset($_POST['startdate1'])){ echo $_POST['startdate1']; }?>" /></td>
       </tr>
       <tr>
         <td>Check out Date</td>
         <td>
-          <input name="enddate1" type="date" value="<?php if(isset($_POST['enddate1'])){ echo $_POST['enddate1']; }?>" onchange='this.form.submit()' /></td>
+          <input name="enddate1" type="date" value="<?php5 if(isset($_POST['enddate1'])){ echo $_POST['enddate1']; }?>" onchange='this.form.submit()' /></td>
         </tr>
 
       </table>
@@ -151,19 +151,19 @@
         <tr>
           <td width="113"></td>
           <td width="215">
-            <input name="startdate" type="hidden" value=" <?php if(isset($_POST['startdate1'])){ echo $_POST['startdate1']; }?> " /></td>
+            <input name="startdate" type="hidden" value=" <?php5 if(isset($_POST['startdate1'])){ echo $_POST['startdate1']; }?> " /></td>
           </tr>
           <tr>
             <td></td>
-            <td><input name="username" type="hidden" value="<?php if(isset($_SESSION['username'])){ echo $_SESSION['username']; } ?>"  />
-              <input name="enddate" type="hidden" value=" <?php if(isset($_POST['enddate1'])){ echo $_POST['enddate1']; }?> "  /></td>
+            <td><input name="username" type="hidden" value="<?php5 if(isset($_SESSION['username'])){ echo $_SESSION['username']; } ?>"  />
+              <input name="enddate" type="hidden" value=" <?php5 if(isset($_POST['enddate1'])){ echo $_POST['enddate1']; }?> "  /></td>
             </tr>
             <tr>
               <td>Room Type </td>
               <td>
                 <select class="text_select" id="field_1" name="field_1" >  
                   <option value="00">- Select -</option>   
-                  <?php if(isset($_POST['startdate1'])){
+                  <?php5 if(isset($_POST['startdate1'])){
                     $paymentDate = $_POST['startdate1'];
                     $endDate = $_POST['enddate1'];
                     $contractDateBegin = '2015-12-20';
@@ -174,7 +174,7 @@ $today = date("Y-m-d");
 if(($_SESSION['today']<$today)||($paymentDate>$endDate)){
   ?>
   <script>alert("Sorry the start date is not available :( choose again !!");</script>
-    <?php	
+    <?php5	
 	//sleep for a second
 	//sleep(5);
     header("location:registration.php");
@@ -195,9 +195,9 @@ if(($_SESSION['today']<$today)||($paymentDate>$endDate)){
     $s3=mysql_query($s2);
   }
   ?>
-  <?php while($catdata=mysql_fetch_array($s3)) { ?>  <option value="<?php echo $catdata['room_type']; ?>"><?php echo $catdata['room_type']." "; echo "(".$catdata['room_price']."$)"; ?></option>
-  <?php } ?>
-  <?php } ?>
+  <?php5 while($catdata=mysql_fetch_array($s3)) { ?>  <option value="<?php5 echo $catdata['room_type']; ?>"><?php5 echo $catdata['room_type']." "; echo "(".$catdata['room_price']."$)"; ?></option>
+  <?php5 } ?>
+  <?php5 } ?>
 </select></td>
 </tr>
 <tr>
