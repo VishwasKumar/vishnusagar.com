@@ -83,7 +83,7 @@
 			<div class="container_12">  
 				<div class="grid_7">  	
 					<br><br><br><br><br><br>
-					<?php 
+					<? php 
 					include('include/db_con.php');
 					session_start();
 					if (isset($_POST['username'],$_POST['password']))
