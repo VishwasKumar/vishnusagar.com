@@ -87,12 +87,12 @@ $(window).load(function () {
   <br><br><br><br><br><br>
 <p><CENTER>WELCOME TO VISHNU SAGAR GROUP.
             HAVE A NICE DAY!!!<br><br><br><br></p></CENTER>
-	  <h1>welcome <?php5 session_start();
+	  <h1>welcome <?php session_start();
 		if(isset($_SESSION['username']))echo $_SESSION['username'];
 		else header("location:index.php"); ?></h1>
 	  Choose option from Below to take action!!!!
 	  Create new Booking click <a href="../registration.php"> Here</a>
-	  <?php5
+	  <?php
 	  include('include/db_con.php');
 	  $sql="select * from roomdetail ";
 	  $row=mysql_query($sql) or die (mysql_error($con));
@@ -100,23 +100,23 @@ $(window).load(function () {
 	  ?><table id="admin">
 	  <tr><td>ID</td><td>CUSTOMER</td><td>CHECKIN DATE</td><td>CHECKOUT DATE</td>
 	  <td>ROOM TYPE</td><td>ROOMS BOOKED</td><td></td><td></td></tr>
-	  <?php5
+	  <?php
 	  $id = 0;
 	  while($data=mysql_fetch_array($row))
 	  {
 		$id++;
 	  ?>
 	  <tr>
-	  <td><?php5 echo $id; ?></td>
-	  <td><?php5 echo $data['username']; ?></td>
-	  <td><?php5 echo $data['checkin_date']; ?></td>
-	  <td><?php5 echo $data['checkout_date']; ?></td>
-	  <td><?php5 echo $data['room_type']; ?></td>
-	  <td><?php5 echo $data['no_of_room']; ?></td>
-	  <td><a href="update.php?id=<?php5 echo $data['id']; ?>">update</a></td>
-	  <td><a href="delete.php?id=<?php5 echo $data['id']; ?>">delete</a></td>
+	  <td><?php echo $id; ?></td>
+	  <td><?php echo $data['username']; ?></td>
+	  <td><?php echo $data['checkin_date']; ?></td>
+	  <td><?php echo $data['checkout_date']; ?></td>
+	  <td><?php echo $data['room_type']; ?></td>
+	  <td><?php echo $data['no_of_room']; ?></td>
+	  <td><a href="update.php?id=<?php echo $data['id']; ?>">update</a></td>
+	  <td><a href="delete.php?id=<?php echo $data['id']; ?>">delete</a></td>
 	  </tr>
-	  <?php5
+	  <?php
 	  }
 	  ?>
 	  </table>

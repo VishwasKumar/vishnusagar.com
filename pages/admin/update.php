@@ -94,7 +94,7 @@ $(window).load(function () {
 			
 			
 			
-<?php5
+<?php
 include('include/db_con.php');
 session_start();
 if(isset($_POST['sub']))
@@ -118,7 +118,7 @@ $roomcount=mysql_fetch_array($check);
 if($checkcount>=10)
 {
 ?> <script>alert("Sorry Rooms Are not Available :( please try another Option !!");</script>
-<?php5 }
+<?php }
 else{
 $checkroom= "select room_price from roomtype where room_type='".$roomtype."' and room_seson='".$_SESSION[season]."'";
 $check=mysql_query($checkroom) or die (mysql_error($con));
@@ -138,7 +138,7 @@ header("location:success.php");
 ?>
 
 <div id="contenar">
-<?php5
+<?php
 if(isset($_GET['id']))
 {
 $_SESSION['id']=$id=$_GET['id'];
@@ -148,22 +148,22 @@ $room=mysql_fetch_array($check1);
 }
 ?>
 	<div id="r">
-	<form action="update.php?id=<?php5 echo $_GET['id'];  ?>" method="POST">
+	<form action="update.php?id=<?php echo $_GET['id'];  ?>" method="POST">
 	<h2 align="center" id="h"><u><i>Book Room</i></u></h2>
-	<h3> Welcome <?php5 /*session_start();*/ if(isset($_SESSION['username'])){ echo $_SESSION['username']; } elseif(isset($_GET['id'])){ echo $room['username']; }  ?> !!!</h3>
+	<h3> Welcome <?php /*session_start();*/ if(isset($_SESSION['username'])){ echo $_SESSION['username']; } elseif(isset($_GET['id'])){ echo $room['username']; }  ?> !!!</h3>
         <table >
 		
           <tr>
             <td width="113">Check in Date</td>
             <td width="215">
-			<?php5 if(isset($_GET['id'])){ ?>
-			 <input name="id" type="hidden"  value="<?php5 if(isset($_GET['id'])){ echo $_GET['id']; }  ?>" /> <?php5 } ?>
-              <input name="startdate1" type="date"  value="<?php5 if(isset($_POST['startdate1'])){ echo $_POST['startdate1']; } elseif(isset($_GET['id'])){ echo $room['checkin_date']; }  ?>" /></td>
+			<?php if(isset($_GET['id'])){ ?>
+			 <input name="id" type="hidden"  value="<?php if(isset($_GET['id'])){ echo $_GET['id']; }  ?>" /> <?php } ?>
+              <input name="startdate1" type="date"  value="<?php if(isset($_POST['startdate1'])){ echo $_POST['startdate1']; } elseif(isset($_GET['id'])){ echo $room['checkin_date']; }  ?>" /></td>
           </tr>
           <tr>
             <td>Check out Date</td>
             <td>
-			  <input name="enddate1" type="date" value="<?php5 if(isset($_POST['enddate1'])){ echo $_POST['enddate1']; } elseif(isset($_GET['id'])){ echo $room['checkout_date']; }  ?>" onchange='this.form.submit()' /></td>
+			  <input name="enddate1" type="date" value="<?php if(isset($_POST['enddate1'])){ echo $_POST['enddate1']; } elseif(isset($_GET['id'])){ echo $room['checkout_date']; }  ?>" onchange='this.form.submit()' /></td>
           </tr>
 			
        </table>
@@ -174,19 +174,19 @@ $room=mysql_fetch_array($check1);
           <tr>
             <td width="113"></td>
             <td width="215">
-              <input name="startdate" type="hidden" value=" <?php5 if(isset($_POST['startdate1'])){ echo $_POST['startdate1'];  } elseif(isset($_GET['id'])){ echo $room['checkin_date']; }?> " /></td>
+              <input name="startdate" type="hidden" value=" <?php if(isset($_POST['startdate1'])){ echo $_POST['startdate1'];  } elseif(isset($_GET['id'])){ echo $room['checkin_date']; }?> " /></td>
           </tr>
           <tr>
             <td></td>
-            <td><input name="username" type="hidden" value="<?php5 /* session_start(); */ if(isset($_SESSION['username'])){ echo $_SESSION['username']; } elseif(isset($_GET['id'])){ echo $room['username']; }  ?>"  />
-              <input name="enddate" type="hidden" value=" <?php5 if(isset($_POST['enddate1'])){ echo $_POST['enddate1']; } elseif(isset($_GET['id'])){ echo $room['checkout_date']; }?> "  /></td>
+            <td><input name="username" type="hidden" value="<?php /* session_start(); */ if(isset($_SESSION['username'])){ echo $_SESSION['username']; } elseif(isset($_GET['id'])){ echo $room['username']; }  ?>"  />
+              <input name="enddate" type="hidden" value=" <?php if(isset($_POST['enddate1'])){ echo $_POST['enddate1']; } elseif(isset($_GET['id'])){ echo $room['checkout_date']; }?> "  /></td>
           </tr>
 		  <tr>
             <td>Room Type </td>
             <td>
               <select class="text_select" id="field_1" name="field_1" >  
 <option value="00">- Select -</option>   
-<?php5 if(isset($_POST['startdate1'])){
+<?php if(isset($_POST['startdate1'])){
 $paymentDate = $_POST['startdate1'];
 $endDate = $_POST['enddate1'];
 $contractDateBegin = '2015-12-20';
@@ -198,7 +198,7 @@ $today = date("Y-m-d");
 if(($_SESSION['today']<$today)||($paymentDate>$endDate)){
 ?>
 	<script>alert("Sorry the start date is not available :( choose again !!");</script>
-<?php5	
+<?php	
 	//sleep for a second
 	//sleep(5);
 	header("location:update.php");
@@ -216,9 +216,9 @@ $s3=mysql_query($s2);
 }
 
 ?>
-<?php5 while($catdata=mysql_fetch_array($s3)) { ?>  <option value="<?php5 echo $catdata['room_type']; ?>"><?php5 echo $catdata['room_type']." "; echo "(".$catdata['room_price']."$)"; ?></option>
-           <?php5 } ?>
-		   <?php5 } ?>
+<?php while($catdata=mysql_fetch_array($s3)) { ?>  <option value="<?php echo $catdata['room_type']; ?>"><?php echo $catdata['room_type']." "; echo "(".$catdata['room_price']."$)"; ?></option>
+           <?php } ?>
+		   <?php } ?>
            </select></td>
           </tr>
 		  <tr>

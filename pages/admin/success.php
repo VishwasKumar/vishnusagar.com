@@ -88,7 +88,7 @@
       HAVE A NICE DAY!!!<br><br><br><br></p></CENTER>
 
 
-      <div><h1><?php5
+      <div><h1><?php
       session_start();
       if(isset($_SESSION['username'])){
        echo "You have successfully booked ".$_SESSION['room_nos']." ".$_SESSION['roomtype'];
