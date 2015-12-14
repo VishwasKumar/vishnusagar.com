@@ -1,4 +1,4 @@
-# shivsagar.com
+# vishnusagar.com
 ======================================================================
 
 	  Website Name: Vishnu Sagar Restaurant and Lodge
