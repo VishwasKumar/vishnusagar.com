@@ -113,14 +113,14 @@
 						}
 					}
 
-					?>
+					? >
 					<form action="admin_login.php" method="POST">
 						<h2 align="center" id="h"><u><i>Login Here........</i></u></h2>
 						<table align="center">
-							<tr> <?php  if (isset($error)) {?>
-								<small style="color:#aa0000;"><?php echo $error; ?>
+							<tr> <? php  if (isset($error)) {? >
+								<small style="color:#aa0000;"><? php echo $error; ?>
 									<br /> <br />
-									<?php } ?> </tr>
+									<?php } ? > </tr>
 									<tr>
 										<td width="113">Email:</td>
 										<td width="215">
