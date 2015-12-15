@@ -6,7 +6,7 @@
 
 <body>
 <?php
-include('include/db_con.php');
+include('../include/db_con.php');
 
 if(isset($_GET['id']))
 {

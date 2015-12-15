@@ -85,7 +85,7 @@
 <div class="content">
   <div class="container_12">
     <?php
-    include('include/db_con.php');
+    include('../include/db_con.php');
     if(isset($_POST['sub']))
     {
       $username=$_POST['username'];

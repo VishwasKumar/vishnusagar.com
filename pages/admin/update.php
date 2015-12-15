@@ -95,7 +95,7 @@ $(window).load(function () {
 			
 			
 <?php
-include('include/db_con.php');
+include('../include/db_con.php');
 session_start();
 if(isset($_POST['sub']))
 {

@@ -16,7 +16,7 @@
   ?>
 
   <?php 
-  // include('include/db_con.php');
+  include('../include/db_con.php');
   /* session_start(); //MS */
   if(isset($_POST['Submit']))
   {
