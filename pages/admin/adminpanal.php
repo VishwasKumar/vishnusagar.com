@@ -93,7 +93,7 @@ $(window).load(function () {
 	  Choose option from Below to take action!!!!
 	  Create new Booking click <a href="../registration.php"> Here</a>
 	  <?php
-	  include('include/db_con.php');
+	  // include('include/db_con.php');
 	  $sql="select * from roomdetail ";
 	  $row=mysql_query($sql) or die (mysql_error($con));
 	 

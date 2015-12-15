@@ -84,7 +84,7 @@
 				<div class="grid_7">  	
 					<br><br><br><br><br><br>
 					<?php 
-					include('include/db_con.php');
+					// include('include/db_con.php');
 					session_start();
 					if (isset($_POST['username'],$_POST['password']))
 					{
